@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+    int i,n, sum=0;
+    
+    printf("enter the number of elements to be inserted:");
+    scanf("%d",&n);
+    int arr1[n];
+    printf("enter the elments of the array 1\n");
+    for(i=0;i<n;i++){
+        printf("enter element");
+        scanf("%d",&arr1[i]);
+    }
+    int arr2[n];
+    printf("enter the elments of the array 2\n");
+    for(i=0;i<n;i++){
+        printf("enter element");
+        scanf("%d",&arr2[i]);
+    }
+    int arr3[n];
+    for(i=0;i<n;i++){
+        arr3[i]=arr1[i]+arr2[i];
+    }
+    for(i=0;i<n;i++){
+        printf("%d\n",arr3[i]);
+    }
+    return 0;
