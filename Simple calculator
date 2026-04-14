@@ -1,33 +1,44 @@
-#include<stdio.h>
-int main () {
+#include <stdio.h>
+int main()
+{
     char op;
-    float a,b,result;
-    printf("enter the operator(+,-,*,/):");
-    scanf("%c",&op);
-    printf("enter two operands:");
-    scanf("%f,%f",&a,&b);
-    switch(op){
-        case'+':
-        result=a+b;
-        printf("%f+%f=%f",a,b,result);
+    float a, b, result;
+    printf("enter the operator(+,-,*,/,):");
+    scanf("%c", &op);
+    printf("enter fisrt operand:");
+    scanf("%f", &a);
+    printf("enter second operand:");
+    scanf("%f", &b);
+    switch (op)
+    {
+    case '+':
+        result = a + b;
+        printf("%.2f+%.2f=%.2f", a, b, result);
         break;
-        case'-':
-        result=a-b;
-        printf("%f-%f=%f",a,b,result);
+    case '-':
+        result = a - b;
+        printf("%.2f-%.2f=%.2f", a, b, result);
         break;
-        case'*':
-        result=a*b;
-        printf("%f*%f=%f",a,b,result);
+    case '*':
+        result = a * b;
+        printf("%.2f*%.2f=%.2f", a, b, result);
         break;
-        case'/':
-            if(b!=0){
-                result=a/b;
-                printf("%f/%f=%f",a,b,result);
-            }
-            else
-                printf("division by zero is not defined.\n");
-            break;
-        default:
-            printf("invalide operator\n");
+    case '/':
+        if (b != 0)
+        {
+            result = a / b;
+            printf("%.2f/%.2f=%.2f", a, b, result);
+        }
+        else
+        {
+            printf("division by zero is not defined");
+        }
+
+        break;
+
+    default:
+        printf("invalid operator");
     }
+
+    return 0;
 }
